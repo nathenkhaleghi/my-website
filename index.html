@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, I'm Nathen Khaleghi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: black;
+            color: white;
+        }
+        header {
+            background: #333;
+            color: darkcyan;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+        }
+        header nav a {
+            color: darkcyan;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background: #333;
+            color: darkcyan;
+            text-align: center;
+            padding: 100px 20px;
+            margin-top: 60px;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 0.15em solid #fff;
+        }
+        .hero p {
+            font-size: 20px;
+            margin: 20px 0;
+            color: white;
+        }
+        .hero .container3 {
+            max-width: 300px;
+            height: 380px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        .circle-image {
+            width: 150%;
+            height: auto;
+            border-radius: 50%;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .content section {
+            margin-bottom: 50px;
+        }
+        .content h2, .project h3 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: darkcyan;
+        }
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: white;
+        }
+        .projects, .contact, .about, .skills, .hobbies {
+            background: #333;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .project {
+            margin-bottom: 30px;
+        }
+        .project h3 {
+            margin: 0;
+            color: darkcyan;
+        }
+        footer {
+            background: #333;
+            color: darkcyan;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .contact-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #008cba;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #005f5f;
+        }
+        .quiz-button, .resume-button {
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 999;
+            transition: opacity 0.3s ease;
+            display: block;
+            margin: 20px auto;
+            background-color: gray;
+            position: relative;
+        }
+        .quiz-button:hover, .resume-button:hover {
+            opacity: 0.8;
+        }
+        a {
+            color: white;
+        }
+        a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1 id="typed-heading">Hi, I'm Nathen Khaleghi</h1>
+        <p>Welcome to my personal website. Learn more about my projects and get in touch!</p>
+        <div class="container3">
+            <img class="circle-image" src="pictures/vantine_hi_res_2699083.jpeg" alt="Portrait">
+        </div>
+    </div>
+
+    <div class="content">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I am a senior at the University of Houston completing a degree in Computer Science with a minor in Mathematics. Along with developing technical skills in my coursework, I am constantly working on numerous coding projects demonstrating proficiency in software engineering and data science. I am constantly looking for new ways to grow my knowledge and gain exposure to the tech industry.
+
+                On top of my education, I am very active in extracurricular activities having held multiple executive positions for school organizations. This has taught me incredibly valuable interpersonal skills that I am eager to combine with my technical knowledge and make a real contribution to the world of tech.</p>
+        </section>
+
+        <section class="skills">
+            <h2>Skills & Interests</h2>
+            <p>My main interest and skill is computer programming. I often spend time coding for either classwork or mini projects like this. My main interests within the realm of the tech industry are data analytics and the ever-increasing use of AI and how it impacts our lives.
+                My strongest area of computer science is data science and machine learning. I am proficient in several python libraries and frameworks
+                and constantly sharpen my skills with numerous projects by analyzing and creating meaningful insight on interesting datasets as well as creating models to help predict and understand data trends.
+                If you would like to take a look at my resume you can click the button below.
+            </p>
+            <button class="resume-button" onclick="downloadResume()">Resume</button>
+        </section>
+
+        <section class="hobbies">
+            <h2>Favorite Hobbies</h2>
+            <p>One of my favorite hobbies is keeping up with the sport of football. It is often how I spend leisure time with my friends and my favorite team is the Dallas Cowboys. I also dedicate lots of my time to health and fitness and I occasionally play the guitar as well.</p>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>ConnectCoogs</h3>
+                <img src="pictures/ccimage.jpeg" alt="ConnectCoogs" style="width:100%; height:auto;">
+                <p>Designed and developed <a href="https://www.connectcoogs.com" target="_blank">connectcoogs.com</a>, a full stack video chat platform designed and intended solely for University of Houston students. I engineered the entire platform, including the homepage, sign-up page, login page, and main page where the video connections are accessible. I also implemented email authentication with CougarNet email to verify user identity as students. I utilized HTML, JavaScript, Node.js, NPM, Socket.io, WebRTC, CSS, PHP, SQL, and JSON, among other technologies, to build and deploy the application.</p>
+            </div>
+            <div class="project">
+                <h3>Customer Segmentation and Marketing Optimization</h3>
+                <img src="pictures/cus.jpeg" alt="Customer Segmentation and Marketing Optimization" style="width:100%; height:auto;">
+                <p>I conducted comprehensive customer segmentation to identify distinct customer groups and their purchasing behaviors using Python. I implemented linear and logistic regression models to predict customer behavior and potential outcomes. I applied clustering techniques to segment customers based on purchasing history and demographics. I developed predictive models to forecast customer lifetime value (CLV) and churn rates utilizing advanced machine learning techniques. I utilized visualization tools such as Matplotlib, Seaborn, and Tableau to present findings and recommendations to stakeholders and conducted in-depth analysis to enhance customer retention strategies and optimize personalized marketing efforts.</p>
+                <p class="center-link"><a href="https://github.com/nathenkhaleghi/Customer-Segmentation-and-Marketing-Optimization" target="_blank">View this project</a></p>
+            </div>
+            <div class="project">
+                <h3>Algorithmic Trading Bot</h3>
+                <img src="pictures/atb.jpeg" alt="Algorithmic Trading Bot" style="width:100%; height:auto;">
+                <p>I developed an algorithmic trading bot to automate stock trading using historical and real-time market data. I utilized Python, Pandas, NumPy, and scikit-learn for data analysis, preprocessing, and model development. I integrated Alpaca API for executing trades based on model's predictions. I also conducted back testing to evaluate the performance of the trading strategies, ensuring robust and reliable results. Lastly, I visualized trading performances and model accuracy using Matplotlib and Seaborn.</p>
+                <a href="https://github.com/nathenkhaleghi/Algorithmic-Trading-Bot" target="_blank">View this project</a>
+            </div>
+            <div class="project">
+                <h3>Financial Asset Clustering and Strategy development</h3>
+                <img src="pictures/fa.jpeg" alt="Financial Asset Clustering and Strategy Development" style="width:100%; height:auto;">
+                <p>I conducted clustering analyis on financial assets to identify distinct groups based on returns, volatility, and moving averages.
+                    I utilized variance inflation factor (VIF) to remove multicollinearity and ensure robust feature selection.
+                    I also developed a neural network model using TensorFlow and Keras to classify assets with an accuracy of 96%.
+                    I implemented regularization techniques and early stopping to prevent overfitting and enhance model generalization.
+                    On top of that I engineered new features including returns, volatility, and moving averages for each asset.
+                    I also developed investment, marketing, and product development strategies tailed to each asset cluster.
+                    I visualized the clustering results and feature importance using Matplotlib and Seaborn to provide actionable insights.
+                    I utilized Python, Pandas, NumPy, scikit-learn, TensorFlow, and Keras for data analysis, preprocessing, and model development.
+                 </p>
+                <a href="https://github.com/nathenkhaleghi/Financial-Analysis" target="_blank">View this project</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>If you would like to get in touch, please reach out to me via email or connect with me on LinkedIn.
+          
+            </p>
+            <p>Email: <a href="mailto:nnkalegi@gmail.com">nnkalegi.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/nathen-khaleghi/" target="_blank">linkedin.com/in/nathen-khaleghi</a></p>
+            <form class="contact-form" action="https://formspree.io/f/{your-form-id}" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nathen Khaleghi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Typing effect for h1 element
+            var typedHeading = document.getElementById("typed-heading");
+            var text = typedHeading.textContent;
+            typedHeading.textContent = "";
+            var index = 0;
+
+            function typeWriter() {
+                if (index < text.length) {
+                    typedHeading.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, 150); // Adjust typing speed as needed
+                } else {
+                    setTimeout(function() {
+                        typedHeading.textContent = "";
+                        index = 0;
+                        typeWriter();
+                    }, 1000); // Adjust delay before restarting typing
+                }
+            }
+
+            // Start typing effect
+            typeWriter();
+        });
+
+        // Function to handle the "Contact Me" button click event
+        function scrollToContact() {
+            document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+        }
+
+        // Function to handle the "Take Quiz" button click event
+        function takeQuiz() {
+            // Navigate to the next page
+            window.location.href = "question1.html"; // Replace "question1.html" with the URL of your quiz page
+        }
+
+        // Function to handle the "Download Resume" button click event
+        function downloadResume() {
+            window.location.href = "pictures/resume.pdf"; // Replace with the actual path to your resume file
+        }
+    </script>
+</body>
+</html>
